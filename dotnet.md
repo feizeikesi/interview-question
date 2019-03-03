@@ -1,59 +1,212 @@
 # .Net面试题
 
-- [.Net面试题](#net%E9%9D%A2%E8%AF%95%E9%A2%98)
-  - [问题](#%E9%97%AE%E9%A2%98)
-    - [什么是ASP.NET](#%E4%BB%80%E4%B9%88%E6%98%AFaspnet)
-    - [ASP.NET和C#有什么区别](#aspnet%E5%92%8Cc%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [ASP Net有哪些优点](#asp-net%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%82%B9)
-    - [什么是MVC框架](#%E4%BB%80%E4%B9%88%E6%98%AFmvc%E6%A1%86%E6%9E%B6)
-    - [ASP.NET WebFrom和MVC有什么区别](#aspnet-webfrom%E5%92%8Cmvc%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [什么是CLR](#%E4%BB%80%E4%B9%88%E6%98%AFclr)
-    - [什么是CSS以及它用于什么](#%E4%BB%80%E4%B9%88%E6%98%AFcss%E4%BB%A5%E5%8F%8A%E5%AE%83%E7%94%A8%E4%BA%8E%E4%BB%80%E4%B9%88)
-    - [什么是STA](#%E4%BB%80%E4%B9%88%E6%98%AFsta)
-    - [什么是MTA](#%E4%BB%80%E4%B9%88%E6%98%AFmta)
-    - [asp和ASP.NET中使用的线程模型是什么](#asp%E5%92%8Caspnet%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [页面生命周期事件是什么](#%E9%A1%B5%E9%9D%A2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BA%8B%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [Union和Union all有什么区别](#union%E5%92%8Cunion-all%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [ASP.NET中的会话是什么](#aspnet%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [ASP.NET中的应用程序和会话是什么](#aspnet%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%92%8C%E4%BC%9A%E8%AF%9D%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [ASP.NET中的会话类型是什么](#aspnet%E4%B8%AD%E7%9A%84%E4%BC%9A%E8%AF%9D%E7%B1%BB%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [ASP.NET中session和viewstate有什么区别](#aspnet%E4%B8%ADsession%E5%92%8Cviewstate%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [如何在ASP.NET中存储和维护会话](#%E5%A6%82%E4%BD%95%E5%9C%A8aspnet%E4%B8%AD%E5%AD%98%E5%82%A8%E5%92%8C%E7%BB%B4%E6%8A%A4%E4%BC%9A%E8%AF%9D)
-    - [`Session.Abandon()`和`Clear()`有什么区别](#sessionabandon%E5%92%8Cclear%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [存储过程与函数有什么区别](#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E4%B8%8E%E5%87%BD%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [将数据从一个页面发送到另一个页面的方法有哪些](#%E5%B0%86%E6%95%B0%E6%8D%AE%E4%BB%8E%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%8F%91%E9%80%81%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B)
-    - [`sealed`类与`static`类有什么区别](#sealed%E7%B1%BB%E4%B8%8Estatic%E7%B1%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [抽象类与接口有什么区别](#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [Web API和Web services有什么区别](#web-api%E5%92%8Cweb-services%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [REST和SOAP有什么区别](#rest%E5%92%8Csoap%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [进程和线程有什么区别](#%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [ASP.NET中的装箱和拆箱是什么](#aspnet%E4%B8%AD%E7%9A%84%E8%A3%85%E7%AE%B1%E5%92%8C%E6%8B%86%E7%AE%B1%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [C＃中`equals()`和`==`有什么区别](#c%EF%BC%83%E4%B8%ADequals%E5%92%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [什么是反射](#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%B0%84)
-    - [`typeof()`与`GetType()`有什么区别](#typeof%E4%B8%8Egettype%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
-    - [什么是XSS](#%E4%BB%80%E4%B9%88%E6%98%AFxss)
-    - [什么是 .NET Core](#%E4%BB%80%E4%B9%88%E6%98%AF-net-core)
-    - [.NET Core 与现有的 .NET Framework有何不同](#net-core-%E4%B8%8E%E7%8E%B0%E6%9C%89%E7%9A%84-net-framework%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C)
-    - [什么是 **.NET Platform Standards**](#%E4%BB%80%E4%B9%88%E6%98%AF-net-platform-standards)
-    - [什么是 ASP .NET Core](#%E4%BB%80%E4%B9%88%E6%98%AF-asp-net-core)
-    - [ASP.NET Core 中新引入的功能有哪些](#aspnet-core-%E4%B8%AD%E6%96%B0%E5%BC%95%E5%85%A5%E7%9A%84%E5%8A%9F%E8%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B)
-    - [什么是ASP.NET核心中间件以及它与HttpModule有何不同](#%E4%BB%80%E4%B9%88%E6%98%AFaspnet%E6%A0%B8%E5%BF%83%E4%B8%AD%E9%97%B4%E4%BB%B6%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%B8%8Ehttpmodule%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C)
-    - [ASP.NET Core中的各种JSON文件是什么](#aspnet-core%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8Djson%E6%96%87%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [ASP.NET Core中的Startup.cs文件是什么](#aspnet-core%E4%B8%AD%E7%9A%84startupcs%E6%96%87%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88)
-    - [什么是Kestral](#%E4%BB%80%E4%B9%88%E6%98%AFkestral)
-    - [什么是WebListener](#%E4%BB%80%E4%B9%88%E6%98%AFweblistener)
-    - [什么是ASP.NET核心模块（ANCM）](#%E4%BB%80%E4%B9%88%E6%98%AFaspnet%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97ancm)
-    - [app.Use与app.Run有什么区别](#appuse%E4%B8%8Eapprun%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
+1. [.Net面试题](#net面试题)
+   1. [.NET](#net)
+      1. [什么是CLR](#什么是clr)
+      2. [CLR的主要职责](#clr的主要职责)
+      3. [什么是CTS](#什么是cts)
+      4. [什么是CLS](#什么是cls)
+      5. [什么是托管代码](#什么是托管代码)
+      6. [MSIL是什么](#msil是什么)
+      7. [什么是JIT](#什么是jit)
+      8. [什么是STA](#什么是sta)
+      9. [什么是MTA](#什么是mta)
+      10. [`sealed`类与`static`类有什么区别](#sealed类与static类有什么区别)
+      11. [抽象类与接口有什么区别](#抽象类与接口有什么区别)
+      12. [什么是序列化](#什么是序列化)
+      13. [什么是线程](#什么是线程)
+      14. [什么是垃圾回收器(GC)](#什么是垃圾回收器gc)
+      15. [什么是世代以及垃圾回收器(GC)如何使用它们](#什么是世代以及垃圾回收器gc如何使用它们)
+      16. [进程和线程有什么区别](#进程和线程有什么区别)
+      17. [ASP.NET中的装箱和拆箱是什么](#aspnet中的装箱和拆箱是什么)
+      18. [C＃中`equals()`和`==`有什么区别](#c中equals和有什么区别)
+      19. [什么是反射](#什么是反射)
+      20. [`typeof()`与`GetType()`有什么区别](#typeof与gettype有什么区别)
+      21. [什么是依赖注入](#什么是依赖注入)
+      22. [列举一下你了解的依赖注入框架](#列举一下你了解的依赖注入框架)
+      23. [析构函数调用顺序](#析构函数调用顺序)
+      24. [构造函数调用顺序](#构造函数调用顺序)
+      25. [什么是值类型和引用类型](#什么是值类型和引用类型)
+      26. [如果需要你设计一个100万的停车场,只实现获取一个空闲停车位,使用什么数据结构更优](#如果需要你设计一个100万的停车场只实现获取一个空闲停车位使用什么数据结构更优)
+      27. [为什么使用`class`存储对象而不是使用`struct`](#为什么使用class存储对象而不是使用struct)
+   2. [ASP.NET](#aspnet)
+      1. [什么是ASP.NET](#什么是aspnet)
+      2. [ASP.NET和C#有什么区别](#aspnet和c有什么区别)
+      3. [ASP Net有哪些优点](#asp-net有哪些优点)
+      4. [什么是MVC框架](#什么是mvc框架)
+      5. [ASP.NET WebFrom和MVC有什么区别](#aspnet-webfrom和mvc有什么区别)
+      6. [asp和ASP.NET中使用的线程模型是什么](#asp和aspnet中使用的线程模型是什么)
+      7. [页面生命周期事件是什么](#页面生命周期事件是什么)
+      8. [ASP.NET中的会话是什么](#aspnet中的会话是什么)
+      9. [ASP.NET中的应用程序和会话是什么](#aspnet中的应用程序和会话是什么)
+      10. [ASP.NET中的会话类型是什么](#aspnet中的会话类型是什么)
+      11. [ASP.NET中session和viewstate有什么区别](#aspnet中session和viewstate有什么区别)
+      12. [如何在ASP.NET中存储和维护会话](#如何在aspnet中存储和维护会话)
+      13. [`Session.Abandon()`和`Clear()`有什么区别](#sessionabandon和clear有什么区别)
+      14. [将数据从一个页面发送到另一个页面的方法有哪些](#将数据从一个页面发送到另一个页面的方法有哪些)
+      15. [Web API和Web services有什么区别](#web-api和web-services有什么区别)
+   3. [.NET Core](#net-core)
+      1. [什么是 .NET Core](#什么是-net-core)
+      2. [.NET Core 与现有的 .NET Framework有何不同](#net-core-与现有的-net-framework有何不同)
+      3. [什么是 **.NET Platform Standards**](#什么是-net-platform-standards)
+      4. [什么是 ASP .NET Core](#什么是-asp-net-core)
+      5. [ASP.NET Core 中新引入的功能有哪些](#aspnet-core-中新引入的功能有哪些)
+      6. [什么是ASP.NET核心中间件以及它与HttpModule有何不同](#什么是aspnet核心中间件以及它与httpmodule有何不同)
+      7. [ASP.NET Core中的各种JSON文件是什么](#aspnet-core中的各种json文件是什么)
+      8. [ASP.NET Core中的Startup.cs文件是什么](#aspnet-core中的startupcs文件是什么)
+      9. [什么是Kestral](#什么是kestral)
+      10. [什么是WebListener](#什么是weblistener)
+      11. [什么是ASP.NET核心模块(ANCM)](#什么是aspnet核心模块ancm)
+      12. [app.Use与app.Run有什么区别](#appuse与apprun有什么区别)
+   4. [其他](#其他)
+      1. [什么是CSS以及它用于什么](#什么是css以及它用于什么)
+      2. [Union和Union all有什么区别](#union和union-all有什么区别)
+      3. [存储过程与函数有什么区别](#存储过程与函数有什么区别)
+      4. [REST和SOAP有什么区别](#rest和soap有什么区别)
+      5. [什么是XSS](#什么是xss)
 
-## 问题
+## .NET
+
+### 什么是CLR
+
+公共语言运行时(CLR)是Microsoft .NET框架的虚拟机组件,用于管理.NET程序的执行.称为即时编译的过程将编译后的代码转换为计算机CPU然后执行的机器指令.
+
+### CLR的主要职责
+
+- 代码管理(加载和执行)
+- 应用程序内存隔离
+- 验证类型安全
+- IL转换为本机代码.
+- 访问元数据(增强型信息)
+- 管理托管对象的内存
+- 执行代码访问安全性
+- 异常处理,包括跨语言异常
+- 托管代码,COM对象和预先存在的DLL(非托管代码和数据)之间的互操作
+- 对象布局的自动化
+- 支持开发人员服务(分析,调试等)
+
+### 什么是CTS
+
+通用类型系统(CTS)描述了托管代码可以使用的数据类型.CTS定义了如何在运行时中声明,使用和管理这些类型.它有助于跨语言集成,类型安全和高性能代码执行.CTS中定义的规则可用于定义您自己的类和值.
+
+### 什么是CLS
+
+公共语言规范(CLS)定义了语言必须遵守的规则和标准,以便与其他.NET语言兼容.这使C＃开发人员能够继承VB.NET或其他.NET兼容语言中定义的类
+
+### 什么是托管代码
+
+.NET Framework提供了一个称为公共语言运行时的运行时环境,它管理代码的执行并提供使开发过程更容易的服务.编译器和工具公开了运行时的功能,使您能够编写受益于此托管执行环境的代码.在公共语言运行库中运行的代码称为托管代码
+
+### MSIL是什么
+
+编译代码时,编译器会将代码转换为Microsoft中间语言(MSIL).公共语言运行库包括一个JIT编译器,用于将此MSIL转换为本机代码.
+
+MSIL包含元数据,这是跨语言互操作性的关键.由于这种元数据在所有.NET语言中都是标准化的,因此用一种语言编写的程序可以理解元数据并执行用不同语言编写的代码.MSIL包括在对象上加载,存储,初始化和调用方法的指令,以及算术和逻辑运算,控制流,直接内存访问,异常处理和其他操作的指令
+
+### 什么是JIT
+
+JIT是一个将MSIL转换为本机代码的编译器.本机代码由可由CPU执行的硬件特定指令组成.
+
+JIT不是将整个MSIL(在可移植的可执行[`PE`]文件中)转换为本机代码,而是在执行期间转换MSIL.存储此转换后的本机代码,以便后续调用可以访问它
+
+### 什么是STA
+
+单线程单元(Single Threaded Apartment),创建STA线程单元拥有它自己的线程.在任何一单元之内都只能有一个线程.在STA线程模式中,对线程的所有调用都放到一个队列中
+
+### 什么是MTA
+
+多线程单元(Multi Threaded Apartment),只有一个单元将在那里,所有线程将在该单一单元内执行.可以同时运行多个线程,并使用所有可用的共享数据
+
+### `sealed`类与`static`类有什么区别
+
+密封类不能被继承.静态类只能有静态成员(例如静态方法,属性和变量).静态类限制用户调用类的默认构造函数.静态类只能有静态构造函数来初始化静态成员.
+
+### 抽象类与接口有什么区别
+
+实现接口的类必须提供该接口所有方法的实现.抽象类可以包含状态(数据成员)和 实现(方法).抽象类可以在不实现抽象方法的情况下继承(尽管这样的派生类本身是抽象的).接口可以继承多个,抽象类只能继承一个
+
+### 什么是序列化
+
+它是将对象的状态存储到存储介质的过程.在此过程中,对象的公共和私有字段以及类的名称(包括包含该类的程序集)将转换为字节流,然后将其写入数据流.随后对对象进行反序列化时,将创建原始对象的精确克隆
+
+### 什么是线程
+
+线程是操作系统分配处理器时间的基本单元
+
+### 什么是垃圾回收器(GC)
+
+垃圾回收器(GC)对托管堆执行定期检查,以识别程序不再需要的对象,并将其从内存中删除
+
+### 什么是世代以及垃圾回收器(GC)如何使用它们
+
+世代是垃圾回收器(GC)使用的托管堆上的对象的划分.此机制允许垃圾回收器执行高度优化的垃圾回收.无法访问的对象放在第0代中,可到达的对象放在第1代中,并且在收集过程中存活的对象被提升为更高代
+
+### 进程和线程有什么区别
+
+线程用于小任务,而进程用于更多“重量级”任务.基本上是应用程序的执行.线程和进程之间的另一个区别是同一进程中的线程共享相同的地址空间,而不同的进程则不共享
+
+### ASP.NET中的装箱和拆箱是什么
+
+装箱是将值类型转换为类型对象或由此值类型实现的任何接口类型的过程.当CLR选中一个值类型时,它将值包装在System.Object中并将其存储在托管堆上.拆箱从对象中提取值类型.
+
+### C＃中`equals()`和`==`有什么区别
+
+`==`如果比较的是值类型,则比较两个对象的值；如果比较的是引用类型,则比较两个对象的引用地址是否相同
+`equals()`是Object里的虚方法,默认用`==`进行比较,但是大部分微软的类,及用户定义的类,都重写了该虚方法,也就是微软和用户各自为自己编写的Object的子类定义了相等比较规则
+
+### 什么是反射
+
+通过反射我们可以动态创建类型的实例,将类型绑定到现有对象,或从现有对象获取类型并调用其方法或访问其字段和属性.我们还可以使用反射访问属性信息.
+
+### `typeof()`与`GetType()`有什么区别
+
+`typeof()`是一个C＃关键字,当您拥有该类的名称时使用.它在编译时计算,因此不能在运行时创建的实例上使用. `GetType()`是可以在实例上使用的对象类的方法.
+
+### 什么是依赖注入
+
+它是通过在运行时添加动态功能的机制。大部分时间都是通过代理类。
+
+### 列举一下你了解的依赖注入框架
+
+- Spring.Net
+- NInject
+- autofac
+- Castle Windsor
+- aps .net core
+
+### 析构函数调用顺序
+
+先调用 __子类__ 的析构函数,再调用 __父类__ 的析构函数
+
+### 构造函数调用顺序
+
+先调用 __父类__ 的构造函数,再调用 __子类__ 的构造函数
+
+### 什么是值类型和引用类型
+
+- 值类型直接包含它们的数据，这些数据要么在堆栈上分配，要么在结构中以内联方式分配。
+- 引用类型存储对值的内存地址的引用，并在堆上分配。
+- 引用类型可以是自描述类型，指针类型或接口类型。
+- 作为值类型的变量每个都有自己的数据副本，因此对一个变量的操作不会影响其他变量。作为引用类型的变量可以引用同一个对象; 因此，对一个变量的操作可能会影响另一个变量引用的同一个对象。所有类型都派生自`System.Object`基类型。
+
+### 如果需要你设计一个100万的停车场,只实现获取一个空闲停车位,使用什么数据结构更优
+
+使用堆栈(Stack),可以用过`stack.Pop()`获取一个空闲停车位
+如果使用列表(List),必须遍历所有列表并检查状态并检索,所以堆栈更优
+
+### 为什么使用`class`存储对象而不是使用`struct`
+
+`struct`是值类型,值类型传递是值而不是引用,在方法传递中需要在堆栈复制新的对象
+
+## ASP.NET
 
 ### 什么是ASP.NET
 
-ASP.NET是一个Web开发平台,它提供了编程模型,全面的软件基础架构以及构建基于Web的应用程序所需的各种服务.它于2002年1月首次发布 .NET Framework 1.0版.Active Server Pages（ASP）技术.ASP.NET基于公共语言运行时（CLR）构建,允许程序员使用任何支持的.NET语言编写ASP.NET代码.
+ASP.NET是一个Web开发平台,它提供了编程模型,全面的软件基础架构以及构建基于Web的应用程序所需的各种服务.它于2002年1月首次发布 .NET Framework 1.0版.Active Server Pages(ASP)技术.ASP.NET基于公共语言运行时(CLR)构建,允许程序员使用任何支持的.NET语言编写ASP.NET代码.
 
 ### ASP.NET和C#有什么区别
 
-C＃是为.NET框架设计的CLS编程语言.ASP.NET是.NET框架的一部分,允许您使用任何符合CLS的语言（如C＃,VB.NET,F＃等）编写Web应用程序.
+C＃是为.NET框架设计的CLS编程语言.ASP.NET是.NET框架的一部分,允许您使用任何符合CLS的语言(如C＃,VB.NET,F＃等)编写Web应用程序.
 
 ### ASP Net有哪些优点
 
@@ -76,8 +229,8 @@ __Model-View-Controller(MVC)__ 架构模式将应用程序分为三个主要组�
 
 - WebFrom
   - 定义
-    - ASP.NET Webform提供了一个类似于Winform的事件响应GUI模型（event-drivenGUI）,隐藏了HTTP、HTML、 JavaScript等细节,将用户界面构建成一个服务器端的树结构控件（Control）,每个控件通过ViewState保持自己的状态,并自动把客户端的js事件和服务器端的事件联系起来.这种做法使得开发WinForm和Webform程序具有相近的开发体验,填平WinForm开发（有状态、面向对象的）和Webform开发（无状态、面向HTML的）之间的鸿沟.
-  - MVP（Model-View-Presenter,模型-视图-表示器）模式
+    - ASP.NET Webform提供了一个类似于Winform的事件响应GUI模型(event-drivenGUI),隐藏了HTTP、HTML、 JavaScript等细节,将用户界面构建成一个服务器端的树结构控件(Control),每个控件通过ViewState保持自己的状态,并自动把客户端的js事件和服务器端的事件联系起来.这种做法使得开发WinForm和Webform程序具有相近的开发体验,填平WinForm开发(有状态、面向对象的)和Webform开发(无状态、面向HTML的)之间的鸿沟.
+  - MVP(Model-View-Presenter,模型-视图-表示器)模式
   - 优点
     - 有大量的服务器控件支持,比如：GridView、Repeater等控件可以方便的进行数据绑定,从而减少的大量代码的编写.
     - 学习成本低,由于微软封装的比较深,造成深入学习的难度加大.
@@ -103,22 +256,6 @@ __Model-View-Controller(MVC)__ 架构模式将应用程序分为三个主要组�
   - 缺点
     - 需要有一定的html、css、js、jquery前端技术,也就增加了一些学习的成本
 
-### 什么是CLR
-
-公共语言运行时（CLR）是Microsoft .NET框架的虚拟机组件,用于管理.NET程序的执行.称为即时编译的过程将编译后的代码转换为计算机CPU然后执行的机器指令.
-
-### 什么是CSS以及它用于什么
-
-CSS是描述网页呈现的语言,包括颜色,布局和字体.它允许人们将演示文稿适应不同类型的设备,例如大屏幕,小屏幕或打印机.CSS独立于HTML,可以与任何基于XML的标记语言一起使用.
-
-### 什么是STA
-
-单线程单元(Single Threaded Apartment),创建STA线程单元拥有它自己的线程.在任何一单元之内都只能有一个线程.在STA线程模式中,对线程的所有调用都放到一个队列中
-
-### 什么是MTA
-
-多线程单元(Multi Threaded Apartment),只有一个单元将在那里,所有线程将在该单一单元内执行.可以同时运行多个线程,并使用所有可用的共享数据
-
 ### asp和ASP.NET中使用的线程模型是什么
 
 ASP使用的STA线程模型和ASP.NET使用MTA线程模型
@@ -127,17 +264,13 @@ ASP使用的STA线程模型和ASP.NET使用MTA线程模型
 
 Page_PreInit->Page_Init->Page_InitComplete->Page_PreLoad->Page_Load->Page_LoadComplete->Page_PreRender->Render
 
-### Union和Union all有什么区别
-
-Union和Union all的区别在于Union all不会消除重复的行,而只是从所有适合查询细节的表中提取所有行并将它们组合成一个表.UNION语句有效地对结果集执行SELECT DISTINCT.
-
 ### ASP.NET中的会话是什么
 
 ASP.NET会话状态使您能够在用户在Web应用程序中导航ASP.NET页面时存储和检索用户的值.HTTP是无状态协议.这意味着Web服务器将页面的每个HTTP请求视为独立请求
 
 ### ASP.NET中的应用程序和会话是什么
 
-Application和Session对象可用于存储对特定用户（会话）或所有用户（应用程序）全局的值
+Application和Session对象可用于存储对特定用户(会话)或所有用户(应用程序)全局的值
 
 ### ASP.NET中的会话类型是什么
 
@@ -158,56 +291,17 @@ SessionState持久保存服务器中特定用户的数据.此数据可用,直到
 
 `Clear`从session的state集合中删除所有键和值, `Abandon`删除session 存储的所有对象
 
-### 存储过程与函数有什么区别
-
-函数必须返回一个值,但在存储过程中它是可选的.函数只能有输入参数,而存储过程可以有输入/输出参数.可以从存储过程调用函数,但不能从函数调用存储过程.
-
 ### 将数据从一个页面发送到另一个页面的方法有哪些
 
 - `Response. Redirect()`
 - `Server.Transfer()`
 - `WebClient.DownloadFile()`
 
-### `sealed`类与`static`类有什么区别
-
-密封类不能被继承.静态类只能有静态成员（例如静态方法,属性和变量）.静态类限制用户调用类的默认构造函数.静态类只能有静态构造函数来初始化静态成员.
-
-### 抽象类与接口有什么区别
-
-实现接口的类必须提供该接口所有方法的实现.抽象类可以包含状态（数据成员）和 实现（方法）.抽象类可以在不实现抽象方法的情况下继承（尽管这样的派生类本身是抽象的）.接口可以继承多个,抽象类只能继承一个
-
 ### Web API和Web services有什么区别
 
 Web services基于SOAP协议.Web API是一个较新的Microsoft框架,可帮助您构建基于REST的界面.响应可以是JSON或XML,但是无法自动生成客户端,因为Web Api不提供Web服务中的WSDL之类的服务描述.
 
-### REST和SOAP有什么区别
-
-Web服务有两种：简单对象访问协议（SOAP）和Representational State Transfer（REST）.SOAP定义了基于XML的消息交换的标准通信协议（规则集）规范.SOAP使用不同的传输协议,例如HTTP和SMTP.
-
-### 进程和线程有什么区别
-
-线程用于小任务,而进程用于更多“重量级”任务.基本上是应用程序的执行.线程和进程之间的另一个区别是同一进程中的线程共享相同的地址空间,而不同的进程则不共享
-
-### ASP.NET中的装箱和拆箱是什么
-
-装箱是将值类型转换为类型对象或由此值类型实现的任何接口类型的过程.当CLR选中一个值类型时,它将值包装在System.Object中并将其存储在托管堆上.拆箱从对象中提取值类型.
-
-### C＃中`equals()`和`==`有什么区别
-
-`==`如果比较的是值类型,则比较两个对象的值；如果比较的是引用类型,则比较两个对象的引用地址是否相同
-`equals()`是Object里的虚方法,默认用`==`进行比较,但是大部分微软的类,及用户定义的类,都重写了该虚方法,也就是微软和用户各自为自己编写的Object的子类定义了相等比较规则
-
-### 什么是反射
-
-通过反射我们可以动态创建类型的实例,将类型绑定到现有对象,或从现有对象获取类型并调用其方法或访问其字段和属性.我们还可以使用反射访问属性信息.
-
-### `typeof()`与`GetType()`有什么区别
-
-`typeof()`是一个C＃关键字,当您拥有该类的名称时使用.它在编译时计算,因此不能在运行时创建的实例上使用. `GetType()`是可以在实例上使用的对象类的方法.
-
-### 什么是XSS
-
- 跨站点脚本(XSS)是指客户端代码注入攻击,其中攻击者可以将恶意脚本（通常也称为恶意负载）执行到合法网站或Web应用程序中.
+## .NET Core
 
 ### 什么是 .NET Core
 
@@ -215,7 +309,7 @@ Web服务有两种：简单对象访问协议（SOAP）和Representational State
 
 - 优点:
   - 灵活部署：可以包含在您的应用程序中,也可以安装在并行用户或机器范围内.
-  - 跨平台：在Windows,MacOS和Linux上运行; 可以移植到其他操作系统.受支持的操作系统（OS）,CPU和应用程序方案将随着时间的推移而增长,由Microsoft,其他公司和个人提供.
+  - 跨平台：在Windows,MacOS和Linux上运行; 可以移植到其他操作系统.受支持的操作系统(OS),CPU和应用程序方案将随着时间的推移而增长,由Microsoft,其他公司和个人提供.
   - 命令行工具：可以在命令行中执行所有产品方案.
   - 兼容：.NET Core通过 .NET标准库与 .NET Framework,Xamarin和Mono兼容.
 
@@ -230,16 +324,16 @@ Web服务有两种：简单对象访问协议（SOAP）和Representational State
 
 ### 什么是 ASP .NET Core
 
-ASP.NET Core 1.0是ASP.NET的下一个版本.它是开源和跨平台框​​架（支持Windows,Mac和Linux）,适用于构建基于云的互联网连接应用程序,如Web应用程序,物联网应用程序和移动应用程序.ASP.NET Core应用程序可以在.NET Core或完整的.NET Framework上运行.
+ASP.NET Core 1.0是ASP.NET的下一个版本.它是开源和跨平台框​​架(支持Windows,Mac和Linux),适用于构建基于云的互联网连接应用程序,如Web应用程序,物联网应用程序和移动应用程序.ASP.NET Core应用程序可以在.NET Core或完整的.NET Framework上运行.
 
 ### ASP.NET Core 中新引入的功能有哪些
 
 - 1.0
   - ASP.NET Core是开源和跨平台的
-  - ASP.NET Core使用两个运行时环境（.NET Core和.NET Framework）..NET核心适用于所有平台（windows,linux和OSx）,其中.NET框架适用于Windows
+  - ASP.NET Core使用两个运行时环境(.NET Core和.NET Framework)..NET核心适用于所有平台(windows,linux和OSx),其中.NET框架适用于Windows
   - .NET Platform Standard是使用PCL解决实际二进制可移植性的新方法
-  - ASP.NET Core适用于文件系统,允许更快的开发周期.它检测代码更改（甚至在visual studio之外）,编译到内存中并加载应用程序.
-  - ASP.NET Core内置了对依赖注入的支持.ASP.NET Core包含一个简单的内置容器（由`IServiceProvider`接口表示）,默认支持构造函数注入,ASP.NET通过DI提供某些服务
+  - ASP.NET Core适用于文件系统,允许更快的开发周期.它检测代码更改(甚至在visual studio之外),编译到内存中并加载应用程序.
+  - ASP.NET Core内置了对依赖注入的支持.ASP.NET Core包含一个简单的内置容器(由`IServiceProvider`接口表示),默认支持构造函数注入,ASP.NET通过DI提供某些服务
   - ASP.NET Core也支持云,因为它支持基于环境的配置.在launchSetting.json文件中阅读有关基于环境的配置的更多信息.
   - ASP.NET Core使用全新的轻量级和模块化HTTP请求管道.
   - `HTTPHandler` 和 `HTTPModules`被 `Middleware` 替代了
@@ -406,7 +500,7 @@ ASP.NET Core 1.0是ASP.NET的下一个版本.它是开源和跨平台框​​�
 
 | HttpModule                                                              | Middleware                                                                                                                      |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `HttpModules`通过`web.config`或`global.asax`配置                        | `Middleware`是通过代码而不是`web.config`配置的.ASP.NET Core 1.0具有`Startup.cs`文件（应用程序的入口点）,其中添加了`Middleware`. |
+| `HttpModules`通过`web.config`或`global.asax`配置                        | `Middleware`是通过代码而不是`web.config`配置的.ASP.NET Core 1.0具有`Startup.cs`文件(应用程序的入口点),其中添加了`Middleware`. |
 | 无法控制其执行顺序.由于`HttpModules`的顺序主要基于应用程序生命周期事件. | 与`HttpModules`不同,您可以完全控制执行的内容和顺序.因为它们按照**添加顺序**执行.                                                |
 | 请求和响应的执行顺序保持不变.                                           | 响应的中间件顺序与请求的顺序相反.                                                                                               |
 | `HttpModules`可以帮助您附加特定于应用程序事件的代码.                    | `Middleware`独立于这些事件.                                                                                                     |
@@ -416,21 +510,21 @@ ASP.NET Core 1.0是ASP.NET的下一个版本.它是开源和跨平台框​​�
 
 ### ASP.NET Core中的Startup.cs文件是什么
 
-在ASP.NET中,`Global.asax`（尽管是可选的）充当应用程序的入口点.`Startup.cs`,它是应用程序本身的入口点.`Startup`类配置处理对应用程序发出的所有请求的请求管道.
+在ASP.NET中,`Global.asax`(尽管是可选的)充当应用程序的入口点.`Startup.cs`,它是应用程序本身的入口点.`Startup`类配置处理对应用程序发出的所有请求的请求管道.
 
 ### 什么是Kestral
 
 Kestrel是一个基于libuv的ASP.NET Core的跨平台Web服务器,libuv是一个跨平台的异步I / O库.Kestrel是默认包含在ASP.NET Core新项目模板中的Web服务器.如果您的应用程序仅接受来自内部网络的请求,您可以单独使用Kestrel.
 
-如果将应用程序公开到Internet,则必须使用IIS,Nginx或Apache作为反向代理服务器.反向代理服务器接收来自Internet的HTTP请求,并在进行一些初步处理后将它们转发给Kestrel.使用反向代理进行边缘部署（暴露于来自Internet的流量）的最重要原因是安全性.Kestrel相对较新,尚未完全抵御攻击
+如果将应用程序公开到Internet,则必须使用IIS,Nginx或Apache作为反向代理服务器.反向代理服务器接收来自Internet的HTTP请求,并在进行一些初步处理后将它们转发给Kestrel.使用反向代理进行边缘部署(暴露于来自Internet的流量)的最重要原因是安全性.Kestrel相对较新,尚未完全抵御攻击
 
 ### 什么是WebListener
 
 ASP.NET Core提供了两个服务器实现Kestral和WebListener.WebListener也是ASP.NET Core的Web服务器,仅在Windows上运行.它建立在Http.Sys内核模式驱动程序之上.WebListener是Kestrel的替代品,可用于直接连接到Internet,而无需依赖IIS作为反向代理服务器.
 
-### 什么是ASP.NET核心模块（ANCM）
+### 什么是ASP.NET核心模块(ANCM)
 
-ASP.NET核心模块（ANCM）允许您在IIS后面运行ASP.NET核心应用程序,它只适用于Kestrel; 它与WebListener不兼容.ANCM是一个本机IIS模块,它挂接到IIS管道并将流量重定向到后端ASP.NET Core应用程序.ASP.NET Core应用程序在与IIS工作进程分开的进程中运行,ANCM也进行进程管理.当第一个请求进入时,ANCM启动ASP.NET Core应用程序的进程,并在崩溃时重新启动它.简而言之,它位于IIS中,并将对ASP.NET Core应用程序的请求路由到Kestral.
+ASP.NET核心模块(ANCM)允许您在IIS后面运行ASP.NET核心应用程序,它只适用于Kestrel; 它与WebListener不兼容.ANCM是一个本机IIS模块,它挂接到IIS管道并将流量重定向到后端ASP.NET Core应用程序.ASP.NET Core应用程序在与IIS工作进程分开的进程中运行,ANCM也进行进程管理.当第一个请求进入时,ANCM启动ASP.NET Core应用程序的进程,并在崩溃时重新启动它.简而言之,它位于IIS中,并将对ASP.NET Core应用程序的请求路由到Kestral.
 
 ### app.Use与app.Run有什么区别
 
@@ -471,3 +565,25 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 ```
 
 ![Alt text](/images/app.Use-vs-app.Run-in-ASP.NET-Core-middleware.png)
+
+## 其他
+
+### 什么是CSS以及它用于什么
+
+CSS是描述网页呈现的语言,包括颜色,布局和字体.它允许人们将演示文稿适应不同类型的设备,例如大屏幕,小屏幕或打印机.CSS独立于HTML,可以与任何基于XML的标记语言一起使用.
+
+### Union和Union all有什么区别
+
+Union和Union all的区别在于Union all不会消除重复的行,而只是从所有适合查询细节的表中提取所有行并将它们组合成一个表.UNION语句有效地对结果集执行SELECT DISTINCT.
+
+### 存储过程与函数有什么区别
+
+函数必须返回一个值,但在存储过程中它是可选的.函数只能有输入参数,而存储过程可以有输入/输出参数.可以从存储过程调用函数,但不能从函数调用存储过程.
+
+### REST和SOAP有什么区别
+
+Web服务有两种：简单对象访问协议(SOAP)和Representational State Transfer(REST).SOAP定义了基于XML的消息交换的标准通信协议(规则集)规范.SOAP使用不同的传输协议,例如HTTP和SMTP.
+
+### 什么是XSS
+
+ 跨站点脚本(XSS)是指客户端代码注入攻击,其中攻击者可以将恶意脚本(通常也称为恶意负载)执行到合法网站或Web应用程序中.
