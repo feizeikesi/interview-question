@@ -508,6 +508,20 @@ ASP.NET Core 1.0是ASP.NET的下一个版本.它是开源和跨平台框​​�
 
 ### ASP.NET Core中的各种JSON文件是什么
 
+- Global.json
+  - 文件中定义的设置应该适用于整个解决方案。global.json中定义的设置意味着解决方案中的所有项目。
+- appsetting.json
+  - appsettings.json文件用于定义与应用程序相关的设置,如连接字符串,日志记录设置或我们在web.config文件中定义的任何其他自定义键。
+- Project.json
+  - 此文件用于定义项目设置和服务器端依赖项。它在很大程度上取代了以前版本的ASP.NET中的web.config文件
+- launchsetting.json
+  - 此json文件包含与Visual Studio配置为用于启动应用程序的每个配置文件关联的项目特定设置,包括应使用的任何环境变量
+- bower.json
+  - Bower是网络的包管理器。Bower可以管理包含HTML,CSS,JavaScript,字体甚至图像文件的组件。
+- package.json
+  - npm是另一个像bower这样的包管理器。但是npm用于安装Node js模块,其中bower用于管理前端组件,如html,css,js等
+- hosting.json
+
 ### ASP.NET Core中的Startup.cs文件是什么
 
 在ASP.NET中,`Global.asax`(尽管是可选的)充当应用程序的入口点.`Startup.cs`,它是应用程序本身的入口点.`Startup`类配置处理对应用程序发出的所有请求的请求管道.
